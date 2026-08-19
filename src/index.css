@@ -1,13 +1,77 @@
-body {
+/* ==========================================================================
+   CONFIGURACIÓN GLOBAL - MODO OSCURO PREMIUM (DARK ELEGANCE)
+   ========================================================================== */
+
+:root {
+  /* Fondos y Superficies */
+  --bg-primary: #121212;         /* Fondo principal de la aplicación */
+  --bg-surface: #1E1E1E;         /* Fondo para tarjetas, modales y contenedores */
+  --bg-surface-hover: #252525;   /* Estado hover para tarjetas y filas */
+  --bg-input: #181818;           /* Fondo para campos de texto y formularios */
+  
+  /* Bordes y Líneas */
+  --border-color: #2A2A2A;       /* Bordes sutiles para delimitación */
+  --border-focus: #F59E0B;       /* Anillo de enfoque activo */
+
+  /* Colores de Acento (Azafrán / Naranja Cálido) */
+  --accent-color: #F59E0B;       /* Color principal para botones y destaques */
+  --accent-hover: #D97706;       /* Hover de botones primarios */
+  --accent-light: rgba(245, 158, 11, 0.15); /* Fondo para badges o elementos seleccionados */
+
+  /* Textos y Tipografía */
+  --text-primary: #E0E0E0;     /* Texto principal con alto contraste */
+  --text-secondary: #A1A1AA;   /* Texto secundario o descripciones */
+  --text-muted: #71717A;       /* Metadatos, fechas o placeholder */
+  --text-on-accent: #000000;   /* Texto sobre botones con fondo de acento */
+
+  /* Tipografías */
+  --font-main: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Bordes Redondeados */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* Sombras y Elevaciones */
+  --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 20px rgba(245, 158, 11, 0.2);
+
+  /* Transiciones */
+  --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset Profesional */
+*, *::before, *::after {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Normalización de Controles */
+input, button, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
 }
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+a:hover {
+  color: var(--accent-hover);}
