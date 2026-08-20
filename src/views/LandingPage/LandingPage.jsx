@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './LandingPage.module.css';
 
 const LandingPage = () => {
@@ -7,6 +8,14 @@ const LandingPage = () => {
 
    return (
       <main className={styles.landingContainer}>
+
+         {/* Botón superior derecho para ir al Home */}
+         <header className={styles.topHeader}>
+            <Link to="/home" className={styles.recetarioBtn}>
+               RECETARIO
+            </Link>
+         </header>
+         
          {/* Fondo sutil en lugar de scanlines para un toque más limpio */}
          <div className={styles.ambientGlow}></div>
 
@@ -39,7 +48,7 @@ const LandingPage = () => {
                </section>
 
                {/* Posibles Categorias del Recetario */}
-               
+
                {/* <section className={styles.tagsSection}>
                   <h3 className={styles.sectionTitle}>[ CATEGORÍAS PRINCIPALES ]</h3>
                   <div className={styles.tagGrid}>

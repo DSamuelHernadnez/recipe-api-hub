@@ -9,19 +9,23 @@ import Detail from './views/Detail/Detail';
 
 // Componentes
 import Nav from './components/Nav/NavBar';
+import { useLocation } from 'react-router-dom';
 import './App.css';
 
 function App() {
+   const location = useLocation();
+   const isLandingPage = location.pathname === '/';
+
    return (
       <div className="App">
-         {/* La NavBar se muestra de forma incondicional en todas las rutas */}
-         <Nav />
+         {/* Renderizamos el Nav solo si NO estamos en la Landing Page */}
+         {!isLandingPage && <Nav />}
 
          <Routes>
             <Route path='/' element={<LandingPage />} />
-            <Route path='/home' element={  <h1> Welcome To Home </h1>}/>
-            <Route path='/create' element={<CreateRecipe />} />
-            <Route path='/detail/:id' element={<Detail />} />
+            <Route path='/home' element={<h1> Welcome To Home </h1>} />
+            <Route path='/createRecipe' element={<h1> Welcome To CreateRecipe </h1>} />
+            <Route path='/detail/:id' element={<h1> Welcome To detail </h1>} />
          </Routes>
       </div>
    );

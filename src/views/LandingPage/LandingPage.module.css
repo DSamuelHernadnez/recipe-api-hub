@@ -21,6 +21,36 @@
   pointer-events: none;
 }
 
+/* Contenedor superior para posicionar el botón en la esquina derecha */
+.topHeader {
+   position: absolute;
+   top: 2rem;
+   right: 2rem;
+   z-index: 10;
+}
+
+/* Estilo elegante para el botón RECETARIO */
+.recetarioBtn {
+   display: inline-block;
+   padding: 0.75rem 1.5rem;
+   background-color: transparent;
+   color: #f3f4f6; /* O ajusta según tu paleta */
+   border: 1px solid rgba(255, 255, 255, 0.2);
+   border-radius: 4px;
+   font-family: inherit;
+   font-weight: 600;
+   letter-spacing: 1px;
+   text-decoration: none;
+   transition: all 0.3s ease;
+}
+
+.recetarioBtn:hover {
+   background-color: #f59e0b; /* Color azafrán/acento característico */
+   color: #0f172a;
+   border-color: #f59e0b;
+   box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+}
+
 /* Tarjeta Principal */
 .heroCard {
   background-color: var(--bg-surface);
