@@ -19,8 +19,7 @@ function App() {
 
          <Routes>
             <Route path='/' element={<LandingPage />} />
-            <Route path='/home' element={<Home />} />
-            <Route path='/recipes' element={<Home />} /> 
+            <Route path='/home' element={  <h1> Welcome To Home </h1>}/>
             <Route path='/create' element={<CreateRecipe />} />
             <Route path='/detail/:id' element={<Detail />} />
          </Routes>

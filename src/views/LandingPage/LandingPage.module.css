@@ -60,20 +60,6 @@
   background: linear-gradient(to bottom, transparent 0%, var(--bg-surface) 100%);
 }
 
-.premiumBadge {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  background-color: var(--bg-surface);
-  color: var(--accent-color);
-  padding: 0.4rem 1rem;
-  border: 1px solid var(--accent-color);
-  border-radius: var(--radius-sm);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-}
-
 /* Títulos */
 .titleGroup {
   padding: 2rem;
